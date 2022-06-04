@@ -12,11 +12,25 @@ class View{
            return '<h1>View not found</h1>';
         }
     }
-   
-    public static function render($view){
-        //metodo responsavel por retornar conteudo renderizado da view
+   /**
+    * metodo responsavel por retornar conteudo renderizado da view
+    * @param string $view
+    * @param array 
+    * @return string
+    */
+    
+    public static function render($view, $vars = []){
+        
         $contentView = self::getContentView($view);
-        return $contentView;    
+        
+        // keys from array
+        $keys = array_keys($vars);
+        
+        $keys = array_map(function($item){
+            return '{{'.$item.'}}';
+        },$keys);
+        
+        return str_replace($keys, array_values($vars), $contentView);   
     }
     
 }
