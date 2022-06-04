@@ -1,0 +1,16 @@
+{
+    "name": "softlivre/puremvc",
+    "description": "pureMVC",
+    "authors": [
+        {
+            "name": "henrique barbosa",
+            "email": "softlivre1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
