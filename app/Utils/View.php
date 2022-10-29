@@ -12,15 +12,16 @@ class View{
            return '<h1>View not found</h1>';
         }
     }
+
    /**
     * metodo responsavel por retornar conteudo renderizado da view
     * @param string $view
-    * @param array 
+    * @param array $vars (string/numeric)
     * @return string
-    */
-    
+    */    
     public static function render($view, $vars = []){
         
+        // view contents
         $contentView = self::getContentView($view);
         
         // keys from array
@@ -30,6 +31,7 @@ class View{
             return '{{'.$item.'}}';
         },$keys);
         
+        // returns rendered content
         return str_replace($keys, array_values($vars), $contentView);   
     }
     
