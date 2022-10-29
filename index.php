@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+// folowing the tutorial on https://www.youtube.com/watch?v=TmeyoTNu748
+// MVC em PHP: Conceito e início do projeto - Série MVC em PHP - Parte 1
+// https://www.youtube.com/playlist?list=PL_zkXQGHYosGQwNkMMdhRZgm4GjspTnXs
+
 require __DIR__.'/vendor/autoload.php';
 use \App\Controller\Pages\Home;
 
