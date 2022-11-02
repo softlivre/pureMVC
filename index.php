@@ -6,22 +6,22 @@ session_start();
 // https://www.youtube.com/playlist?list=PL_zkXQGHYosGQwNkMMdhRZgm4GjspTnXs
 
 require __DIR__.'/vendor/autoload.php';
-use \App\Controller\Pages\Home;
+require __DIR__.'/resources/enviroment.php';
+require __DIR__.'/resources/debuglevel.php';
 
-// read .env variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load(true);
+use \App\Http\Router;
+use \App\Utils\View;
 
-$app_debug = (strcasecmp($_ENV['APP_DEBUG'], 'true') ? false : true);
+// sets the default variables values
+View::init([
+    'URL' => URL
+]);
 
-if($app_debug){
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-}
-else{
-    error_reporting(0);
-    ini_set('display_errors', 0);
-}
+// start the router
+$obRouter = new Router (URL);
 
-echo Home::getHome();
+// include pages routes
+include __DIR__.'/routes/pages.php';
+
+// print route response
+$obRouter->run()->sendResponse();

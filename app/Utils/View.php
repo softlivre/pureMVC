@@ -3,6 +3,19 @@
 namespace App\Utils;
 
 class View{
+
+    /**
+     * default variables of view
+     */
+    private static $vars = [];
+
+    /** 
+     * Define initial data of class
+     */
+    public static function init($vars = []){        
+        self::$vars = $vars;
+    }
+
     private static function getContentView($view){
         //retorna o conteudo exato da view
        $file = __DIR__.'/../../resources/view/'.$view.'.html';       
@@ -23,6 +36,8 @@ class View{
         
         // view contents
         $contentView = self::getContentView($view);
+
+        $vars = array_merge(self::$vars , $vars);
         
         // keys from array
         $keys = array_keys($vars);
