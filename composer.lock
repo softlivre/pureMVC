@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3cf08770b6118055bf088832d438477",
+    "content-hash": "50289310efb2c8c6d27ea4a3bb939c4b",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -138,6 +138,49 @@
                 }
             ],
             "time": "2021-12-04T23:24:31+00:00"
+        },
+        {
+            "name": "softlivre/pgsql-database-manager",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/softlivre/DatabaseManager.git",
+                "reference": "e01aa2b4e587950952601f1c87d3737c3eaecc83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/softlivre/DatabaseManager/zipball/e01aa2b4e587950952601f1c87d3737c3eaecc83",
+                "reference": "e01aa2b4e587950952601f1c87d3737c3eaecc83",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Softlivre\\DatabaseManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Henrique Soares Barbosa",
+                    "email": "softlivre1@gmail.com",
+                    "homepage": "https://softlivre.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "class for postgresql operations and pagination of results in PHP",
+            "support": {
+                "issues": "https://github.com/softlivre/DatabaseManager/issues",
+                "source": "https://github.com/softlivre/DatabaseManager/tree/main"
+            },
+            "time": "2022-11-07T21:01:06+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -470,52 +513,14 @@
                 }
             ],
             "time": "2022-10-16T01:01:54+00:00"
-        },
-        {
-            "name": "william-costa/database-manager",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/william-costa/database-manager.git",
-                "reference": "ed871363f27251a882b9e5dc036dcac566b271c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/william-costa/database-manager/zipball/ed871363f27251a882b9e5dc036dcac566b271c4",
-                "reference": "ed871363f27251a882b9e5dc036dcac566b271c4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "WilliamCosta\\DatabaseManager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "William Costa",
-                    "email": "canalwdev@gmail.com"
-                }
-            ],
-            "description": "A simple library for managing database connections, results pagination and building queries in PHP.",
-            "support": {
-                "issues": "https://github.com/william-costa/database-manager/issues",
-                "source": "https://github.com/william-costa/database-manager/tree/v0.1.0"
-            },
-            "time": "2021-03-19T18:51:35+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "softlivre/pgsql-database-manager": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
