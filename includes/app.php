@@ -17,5 +17,8 @@ Database::config(
 
 // sets the default variables values
 View::init([
-    'URL' => URL
+    'URL' => URL,
+    'APP_NAME' => APP_NAME,
+    'APP_DESCRIPTION' => APP_DESCRITION
 ]);
+

@@ -63,7 +63,8 @@ class Testimony extends Page
         return parent::getPage('Depoimentos > Myapp', $content);
     }
 
-    public static function insertTestimony($request){
+    public static function insertTestimony($request)
+    {
         // post data
         $postVars = $request->getPostVars();
 
