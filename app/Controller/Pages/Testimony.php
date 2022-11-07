@@ -10,7 +10,7 @@ namespace App\Controller\Pages;
 
 use \App\Utils\View;
 use \App\Model\Entity\Testimony as EntityTestimony;
-use \WilliamCosta\DatabaseManager\Pagination;
+use \Softlivre\DatabaseManager\Pagination;
 
 
 class Testimony extends Page

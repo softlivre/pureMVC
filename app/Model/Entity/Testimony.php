@@ -2,7 +2,7 @@
 
 namespace App\Model\Entity;
 
-use \WilliamCosta\DatabaseManager\Database;
+use \Softlivre\DatabaseManager\Database;
 
 class Testimony{
 

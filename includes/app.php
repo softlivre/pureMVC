@@ -4,7 +4,7 @@ require __DIR__.'/../resources/enviroment.php';
 require __DIR__.'/../resources/debuglevel.php';
 
 use \App\Utils\View;
-use \WilliamCosta\DatabaseManager\Database;
+use \Softlivre\DatabaseManager\Database;
 
 // define DB config
 Database::config(
