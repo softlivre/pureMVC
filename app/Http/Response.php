@@ -28,10 +28,10 @@ class Response{
     }
 
     private function sendHeaders(){
-        //status
+        // status
         http_response_code($this->httpCode);
 
-        // send headers
+        // send headers to browser
         foreach($this->headers as $key => $value){
             header($key.': '.$value);
         }
