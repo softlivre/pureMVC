@@ -28,6 +28,6 @@ class Home extends Page
             'name' => $obOrganization->name            
         ]);
 
-        return parent::getPage('Home > Myapp', $content);
+        return parent::getPage('Home '.APP_NAME, $content);
     }
 }

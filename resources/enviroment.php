@@ -4,7 +4,11 @@
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
 $dotenv->load(true);
 
+define('APP_NAME', $_ENV['APP_NAME']);
+define('APP_DESCRITION', $_ENV['APP_DESCRITION']);
+
 define('URL', $_ENV['URL']);
+
 define('DB_HOST', $_ENV['DB_HOST']);
 define('DB_NAME', $_ENV['DB_NAME']);
 define('DB_USER', $_ENV['DB_USER']);

@@ -10,7 +10,7 @@ namespace App\Model\Entity;
 class Organization
 {
     public $id; // organization id
-    public $name = "organization name";
+    public $name = "Organization name";
     public $site = "https://softlivre.com.br";
     public $description = "organization description";
 
